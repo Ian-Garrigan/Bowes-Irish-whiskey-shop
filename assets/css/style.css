@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'SHERWOOD';
+    src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713122667/Bowes-Irish-Whiskey/SHERWOOD_vvjlgh.TTF') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+h1 {
+    font-family: 'SHERWOOD';
+}
