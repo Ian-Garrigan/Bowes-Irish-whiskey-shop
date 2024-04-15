@@ -54,3 +54,17 @@ body {
     color: rgb(255, 255, 255);
     font-size: 15px;
 }
+
+
+/* Added in as part of work on contact-page in particular, PD */
+.container{
+  margin:0 auto;
+}
+
+.row{
+  justify-content: space-between;
+}
+
+#contactForm {
+  text-align: center;
+}
