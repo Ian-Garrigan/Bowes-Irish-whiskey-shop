@@ -1,10 +1,56 @@
 @font-face {
-    font-family: 'SHERWOOD';
-    src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713122667/Bowes-Irish-Whiskey/SHERWOOD_vvjlgh.TTF') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-  }
+  font-family: 'SHERWOOD';
+  src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713122667/Bowes-Irish-Whiskey/SHERWOOD_vvjlgh.TTF') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
 
-h1 {
-    font-family: 'SHERWOOD';
+@font-face {
+  font-family: 'CelticHand';
+  src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713124666/Bowes-Irish-Whiskey/CelticHand_ezude7.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border: 0;
+  width: 100%;
+  background-color: #169b61eb;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-family: 'CelticHand';
+
+}
+
+.navbar .navbar-nav a {
+  font-size: 1rem;
+}
+
+.navbar .navbar-toggler {
+  border: 0px;
+}
+
+/* buttons */
+
+.btn--cta.btn-orange {
+  color: #191919;
+  background-color: #f5f5f3;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn--cta.btn-orange:hover,
+.btn--cta.btn-orange:active,
+.btn--cta.btn-orange:focus,
+.btn--cta.btn-orange:active:focus {
+    background-color: #ff883e;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
 }
