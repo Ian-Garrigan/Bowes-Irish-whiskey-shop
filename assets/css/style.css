@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'SHERWOOD';
-  src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713122667/Bowes-Irish-Whiskey/SHERWOOD_vvjlgh.TTF') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: 'CelticHand';
   src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713124666/Bowes-Irish-Whiskey/CelticHand_ezude7.ttf') format('truetype');
   font-style: normal;
@@ -13,7 +6,7 @@
 }
 
 body {
-  font-family: 'Hammersmith One', sans-serif;
+  font-family:  "Roboto", Arial, Helvetica, sans-serif;
 }
 
 .navbar {
