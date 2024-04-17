@@ -37,13 +37,15 @@
                 <li class="nav-item mr-2"><a class="nav-link" href="#">About</a></li>
                 <li class="active nav-item mr-2"><a class="nav-link" href="/pages/contact-page/contact.html">Contact Us</a></li>
                 <li class="nav-item mr-2 d-block d-sm-none"><button type="button" class="nav-link btn" data-toggle="modal" data-target="#signupmodal">Sign Up</button></li>
+                <li class="nav-item mr-2 d-block d-sm-none"><button type="button" class="nav-link btn" data-toggle="modal" data-target="#loginmodal">login</button></li>
             </ul>
         </div>
 
         <div class="d-none d-md-block">
             <p class="active navbar-text my-auto mr-2"><i>Online shop now open! We stock Ireland's finest whiskey.</i>
             </p>
-            <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#signupmodal">Log In | Sign Up</a>
+            <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
+            <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#loginmodal">Login</a>
         </div>
     </nav>
 
@@ -91,6 +93,38 @@
         </div>
     </div>
 
+    <div class="modal" tabindex="-1" id="loginmodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Bowes Irish Whiskey Shop</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <label for="first-password">Password</label>
+                    <input type="password" class="form-control" id="first-password">
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="modal" tabindex="-1" id="signupmodal">
         <div class="modal-dialog">
           <div class="modal-content">
