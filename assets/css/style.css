@@ -6,11 +6,14 @@
   font-weight: normal;
 }
 
-body, h3, p {
-  font-family:  "Roboto", Arial, Helvetica, sans-serif;
+/* Google font */
+body {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
 }
 
-h1, h2 {
+h1 {
   font-family: 'CelticHand';
 }
 
@@ -38,19 +41,20 @@ h1, h2 {
  /* buttons IAN.G */
 
 .btn--cta.btn-orange {
-  color: #191919;
-  background-color: #f5f5f3;
+  color: #191919cf;
+  background-color: #f5f5f3c3;
   border-radius: 5px;
   font-size: 14px;
 }
+
 
 .btn--cta.btn-orange:hover,
 .btn--cta.btn-orange:active,
 .btn--cta.btn-orange:focus,
 .btn--cta.btn-orange:active:focus {
-    background-color: #ff883e;
+    background-color: #ff883ee5;
     color: rgb(255, 255, 255);
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
@@ -104,7 +108,7 @@ h1, h2 {
 /* Jumbotron IAN.G*/
 
 .jumbotron {
-  background-color: rgba(192, 182, 161, 0.664) !important;
+  background-color: rgba(192, 182, 161, 0.791) !important;
   padding: 18px !important;
 }
 
@@ -113,7 +117,29 @@ h1, h2 {
   font-size: 48px;
 }
 
-.hr-black {
+/* Google font */
+.address {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.jumbotron h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.hr-orange {
   border: 2px solid #ff883e90;
   width: 85%;
 }
+
+/* footer IAN.G */
+.footer {
+  background-color: #169b61eb;
+}
+
+.social-icons {
+font-size: 30px;
+}
+
