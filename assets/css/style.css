@@ -1,3 +1,4 @@
+/* custom font from cloud storage IAN.G */
 @font-face {
   font-family: 'CelticHand';
   src: url('https://res.cloudinary.com/dfwhnlt1s/raw/upload/v1713124666/Bowes-Irish-Whiskey/CelticHand_ezude7.ttf') format('truetype');
@@ -5,10 +6,15 @@
   font-weight: normal;
 }
 
-body {
+body, h3, p {
   font-family:  "Roboto", Arial, Helvetica, sans-serif;
 }
 
+h1, h2 {
+  font-family: 'CelticHand';
+}
+
+/* Responsive nav IAN.G */
 .navbar {
   margin-bottom: 0;
   border: 0;
@@ -19,7 +25,6 @@ body {
 .navbar .navbar-brand {
   font-size: 1.8rem;
   font-family: 'CelticHand';
-
 }
 
 .navbar .navbar-nav a {
@@ -30,7 +35,7 @@ body {
   border: 0px;
 }
 
-/* buttons */
+ /* buttons IAN.G */
 
 .btn--cta.btn-orange {
   color: #191919;
@@ -60,4 +65,45 @@ body {
 
 #contactForm {
   text-align: center;
+}
+
+/* homepage wideview background IAN.G  */
+.hero-container {
+  height: 100vh;
+
+  background: url('https://res.cloudinary.com/dfwhnlt1s/image/upload/v1713316571/Bowes-Irish-Whiskey/ile5xhvd7imzmajtmlcb.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.visual-overlay {
+  position: absolute;
+  background-color: rgba(121, 76, 46, 0.536);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Jumbotron IAN.G*/
+
+.jumbotron {
+  background-color: rgba(192, 182, 161, 0.664) !important;
+  padding: 18px !important;
+}
+
+.jumbotron h1 {
+  margin-bottom: 1rem;
+  font-size: 48px;
+}
+
+.hr-black {
+  border: 2px solid #ff883e90;
+  width: 85%;
 }
