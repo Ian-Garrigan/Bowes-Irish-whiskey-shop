@@ -49,48 +49,124 @@
         </div>
     </nav>
 
-    <!-- Main page content - contact form -->
+    <!-- Main page content - contact form. Philip D.-->
+
+    <!-- Container for the background image.-->
+    <div class="container-fluid contact-page-container">    
 
     <!-- Text and content above the contact form itself -->
-    <div class="container">
-        <br/><br/><br/><br/><br/>
+<!--       <div class="container">
+          <br/><br/><br/><br/><br/>
+          <div class="row">
+            <div class="col-lg-12">
+                <h3 class="text-center">We also enjoy speaking to fellow whiskey enthusiasts, there is no ask too large or too small. 
+                  If you would like, please submit your details below and we will be in touch as soon as possible.</h3>
+            </div>
+          </div>
+      </div> -->
+
+      <div class="container-fluid contact-page-container">
+        <div class="visual-overlay">&nbsp;</div>
         <div class="row">
-            <div class="col-lg-1">
-                <h5></h5>
-            </div>
-            <div class="col-lg-8">
-                <h2>Contact page text, potentially some images here. PLACEHOLDER - Philip D.</h2>
-            </div>
-            <div class="col-lg-1">
-                <h5></h5>
+            <div class="col-lg-12">
+                <section class="jumbotron text-center">
+                  <h1 class="jumbotron-header">"Labhair Linn"</h1>
+                  <hr class="hr-black">
+                  <h5>We love speaking with fellow whiskey enthusiasts, there is no ask too large or too small. 
+                    If you would like, please submit your details below and we will be in touch as soon as possible.</h5>
+                  <hr class="hr-black">                  
+                  <br/>
+          <div class="row">
+              <div class="col-lg-3">                
+              </div>
+              <div class="col-lg-4">
+                  <form id="contactForm">
+
+                      <!-- First Name -->
+                      <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>    
+                        <small id="firstNameHelp" class="form-text">Please enter your first name</small>                  
+                      </div>
+
+                      <!-- Last Name -->
+                      <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">    
+                        <small id="lastNameHelp" class="form-text">Please enter your last name</small>                  
+                      </div>
+                    
+
+                      <!-- Email -->
+                      <div class="form-group">
+                        <label for="emailAddress">Email</label>
+                        <input type="email" class="form-control" id="emailAddress" placeholder="Email Address" required>   
+                        <small id="emailHelp" class="form-text">Please enter your email address</small>                    
+                      </div>
+
+                      <!-- Mobile number -->
+                      <div class="form-group">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <input type="number" class="form-control" id="mobileNumber" placeholder="Mobile Number">    
+                        <small id="mobileNumberHelp" class="form-text">Please enter your mobile number including any country code if outside Ireland</small>                    
+                      </div>
+                      <br/>
+
+                      <!-- Preferred method of communication radio buttons -->
+                      <label class="form-group-label" for="preferredCommunicationMethod">Preferred method of communication</label>
+                      <small id="mobileNumberHelp" class="form-text">Please let us know how best to contact you</small>
+                      <br/>
+
+                      <div class="form-group" id="preferredCommunicationMethod">
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="preferredCommunicationMethod" id="mobilePreferred" value="option1" checked>
+                          <label class="form-check-label" for="mobilePreferred">Mobile</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="preferredCommunicationMethod" id="emailPreferred" value="option2">
+                          <label class="form-check-label" for="emailPreferred">Email</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="preferredCommunicationMethod" id="eitherMobileOrEmail" value="option3">
+                          <label class="form-check-label" for="eitherMobileOrEmail">Either</label>
+                        </div>
+
+                      </div>
+                      <br/>  
+                                        
+                      <!-- Query Field -->
+                      <div class="form-group">
+                        <label for="queryText">Query</label>
+                        <textarea class="form-control" id="queryText" rows=5 placeholder="Any details of your query that you can share"></textarea> 
+                        <small id="mobileNumberHelp" class="form-text">Please enter any details of your query that might assist us in best handling your query</small>                                        
+                      </div>
+
+                      <!-- Submit -->
+                      <button type="submit" class="btn btn-primary" onclick="contactForm()">Submit</button>
+                  </form>
+
+                  
+
+                  <br/><br/><br/>
+
+              </div>
+              <div class="col-lg-3">
+              </div>
+          </div>
+      </div>
+
+                </section>
             </div>
         </div>
     </div>
 
 
-    <!-- The contact form itself - plenty more to do here in terms of alignment, exploring different input types, checking reponsiveness, javascript validation and messaging back to user etc. -->
-    <div class="container">
-        <br/><br/>
-        <div class="row">
-            <div class="col-lg-3">
-                <h5></h5>
-            </div>
-            <div class="col-lg-4">
-                <form id="contactForm">
+      <!-- The contact form itself - plenty more to do here in terms of alignment, exploring different input types, checking reponsiveness, javascript validation and messaging back to user etc. -->
+      
 
-                    First Name: <input id="firstname" type="text" /><br/>
-                    Last Name: <input id="lastName" type="text" /><br/>                      
-                    Email: <input id="emailAddress" type="email" /><br/>
-                    Query: <textarea id="query" name="query" rows=5>Please enter any additional information that you would like to add in here.</textarea><br/><br/>
-
-                    <input type="submit" onclick="" /><br/>
-                    
-                </form>
-            </div>
-            <div class="col-lg-3">
-                <h5></h5>
-            </div>
-        </div>
     </div>
 
     <div class="modal" tabindex="-1" id="loginmodal">
@@ -163,12 +239,18 @@
         </div>
       </div>
 
+      <!-- Javascript -->
+      <script src="../../assets/javascript/script.js"></script>
+      
+      <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap 4 js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
-        </script>
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
