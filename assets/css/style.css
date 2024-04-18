@@ -7,10 +7,8 @@
 }
 
 /* Google font */
-body {
+body, p, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif !important;
-  font-weight: 400 !important;
-  font-style: normal !important;
 }
 
 h1 {
@@ -26,7 +24,7 @@ h1 {
 }
 
 .navbar .navbar-brand {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: 'CelticHand';
 }
 
@@ -110,6 +108,7 @@ h1 {
 .jumbotron {
   background-color: rgba(192, 182, 161, 0.791) !important;
   padding: 18px !important;
+  margin-top: 2em;
 }
 
 .jumbotron h1 {
@@ -156,5 +155,9 @@ h1 {
 
 .social-icons {
 font-size: 30px;
+color: black;
 }
 
+.icon-3 img {
+  margin-bottom: 7px;
+}
