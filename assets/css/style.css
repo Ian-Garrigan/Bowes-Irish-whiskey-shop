@@ -58,7 +58,7 @@ h1 {
 }
 
 
-/* Added in as part of work on contact-page in particular, PD */
+/* Added in as part of work on contact-page in particular, Philip D. Leverages work done by Ian G. in relation to the background image and visual overlay */
 .container{
   margin:0 auto;
 }
@@ -67,9 +67,19 @@ h1 {
   justify-content: space-between;
 }
 
-#contactForm {
-  text-align: center;
+.contact-page-container {
+  background: url('../images/whiskey-barrels.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
+
+
 
 /* homepage wideview background IAN.G  */
 .hero-container {
