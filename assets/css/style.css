@@ -104,7 +104,22 @@ h1 {
 
 .jumbotron h1 {
   margin-bottom: 1rem;
-  font-size: 48px;
+}
+
+/* temporary change for review */
+.jumbotron-contact-page {
+  background-color: transparent !important;
+  color: azure;
+}
+
+.jumbotron-contact-page label {
+  color: black;
+  font-weight: 500;
+}
+
+.jumbotron-header {
+  font-size: 55px;
+  color: black;
 }
 
 /* Google font */
