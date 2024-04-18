@@ -51,19 +51,30 @@
     </nav>
 
     <!-- Main page content - game page. Philip D.-->
+    <div class="container-fluid hero-container">
+      <div class="visual-overlay">&nbsp;</div>
+      <div class="row">
+          <div class="col-12">
+              <section class="jumbotron text-center">                
+                <h1 class="jumbotron-header">"Play to Win"</h1>
+                <hr class="hr-orange">
+                <h4>Win a code for 10% off your first order with Bowes Irish Whiskey</h4>
+                <hr class="hr-orange">
+                <p>Are you ready to put your whiskey knowledge to the test?</p><br>                        
+                <span><button class="btn btn-md btn-success" onclick="jsMiniGame()">Click here to play</button></span>
+                <br/><br/>
+                <p id="gameOutput"></p>
+                <p id="question1"></p>
+                <p id="option1.1"></p>
+                <p id="option1.2"></p>
+                <p id="option1.3"></p>
+                <button id="button" onclick="checkAnswer()" style="display:none"></button>
+              </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">                
-            </div>
-            <div class="col-lg-4">   
-                <br/><br/><br/><br/>
-                <h5>Placeholder for Mini Javascript game</h5>             
-            </div>
-            <div class="col-lg-3">                
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
+
     
 
 
