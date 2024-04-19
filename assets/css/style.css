@@ -151,6 +151,7 @@ h1 {
 /* footer IAN.G */
 .footer {
   background-color: #169b61eb;
+  background: cross-fade(50rem)
 }
 
 .social-icons {
@@ -171,7 +172,8 @@ color: black;
 .heading{
 
   text-align: center;
-  color:#90EE90;
+  font-family:Brush Script MT;
+  color:#62d662;
   text-transform: uppercase;
   font-size: 4rem;
   margin-top: 50px;
@@ -236,7 +238,9 @@ color: black;
   width: 150px;
   height: 3px;
   background:black;
-  line
-
 }
 
+.carousel-inner{
+width:cover;
+height: 400px;
+}
