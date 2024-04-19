@@ -16,7 +16,8 @@ function contactForm()
 
 
 function jsMiniGame()
-{
+{   
+    
     // Define set of questions and answers
     const questions = ["Which country produces the largest amount of whiskey per year by volume?",
     "What is the world's most popular brand of whiskey?",
@@ -58,23 +59,27 @@ function jsMiniGame()
             alert("Well done, you got the second question right :)");
             if(prompt(questions[num3])==answers[num3])
             {
-                alert("Well done, you got the third question right :). Your voucher code is: BOWES10");
-                
+                alert("Well done, you have won! Please see the screen for your voucher code.");
+                gameWonDOMUpdates();
             }
             else
             {
                 alert("Hard luck, please try again soon. The answer was " + answers[num3]);
+                
+                gameLostDOMUpdates();
             }
         }
         else
         {
             alert("Hard luck, please try again soon. The answer was " + answers[num2]);
+            gameLostDOMUpdates();
         }
         
     }
     else
     {
         alert("Hard luck, please try again soon. The answer was " + answers[num1]);
+        gameLostDOMUpdates();
     }
 
         // Update numbers so if user plays again without closing browser, they likely won't get the same questions
@@ -96,4 +101,26 @@ function jsMiniGame()
             }
         }
 
+}
+
+function gameLostDOMUpdates()
+{
+    // Reset DOM to default if needed (in case someone playing again after winning)
+    document.getElementById("gamePromptText").innerHTML="Are you ready to put your whiskey knowledge to the test?";
+    document.getElementById("gameButton").innerHTML="Click here to play again";
+    // Hide these elements
+    document.getElementById("gameOutputLine").style.display="none";
+    document.getElementById("gameOutputHeading").style.display="none";
+    document.getElementById("gameOutputBody").style.display="none";
+}
+
+function gameWonDOMUpdates()
+{
+    document.getElementById("gamePromptText").innerHTML="Looking to sharpen your whiskey knowledge even further?";
+    document.getElementById("gameButton").innerHTML="Click here to play again";
+    document.getElementById("gameOutputLine").style.display="block";
+    document.getElementById("gameOutputHeading").innerHTML="Congratulations!";
+    document.getElementById("gameOutputHeading").style.display="block";
+    document.getElementById("gameOutputBody").innerHTML="Your voucher code is <br/> <strong>BOWES10</strong>";
+    document.getElementById("gameOutputBody").style.display="block";
 }
