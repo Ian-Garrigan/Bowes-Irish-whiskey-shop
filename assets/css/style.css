@@ -77,6 +77,19 @@ h1 {
   justify-content: center;
 }
 
+.game-page-container {
+  height: 100vh;
+  background: url('../images/whiskey-bottles.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* homepage wideview background IAN.G  */
