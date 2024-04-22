@@ -159,81 +159,111 @@ font-size: 30px;
 color: black;
 }
 
-.icon-3 img {
+.icon-3 img{
   margin-bottom: 7px;
 }
 
 /* About Us page - Jibin*/
 
-.sectction{
+.section{
   padding: 2rem 7%;
 }
 
 .heading{
 
   text-align: center;
-  font-family:Brush Script MT;
-  color:#62d662;
+  font-family:CelticHand;
+  color:rgb(57, 109, 90);
   text-transform: uppercase;
+  filter: drop-shadow(5px 5px 5px rgb(134, 180, 134));
   font-size: 4rem;
   margin-top: 50px;
-  gap: 7rem;
 }
 
-.about{
+@media(min-width:768px){
+  #abt_about, .abt_about{
 
-  padding-top: 150px;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-left: 80px;
-  background-image: url(../images/about7.jpg);
-  background-size:cover;
-  backdrop-filter:blur;
+    background:url('../images/about7.jpg') no-repeat center center fixed;
+    height:100%;
+    position:relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    align-items:center;
+    display: flex;
+    padding: 2.5%;
+    margin: 1.4rem;
+  }
+
+  .about_container, #about_container{
+    background-color: whitesmoke;
+    height:100%;
+    position:relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 2.5%;
+    margin: 1.4rem;
+  }
+
+  .abt_image, .abt_row, .abt_content, .abt_about{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    margin: 2rem;
+    padding: 2rem;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content:space-between;
+  
+  }
+
+  .about_row, .about_image, .about_container, .about_content{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1;
+    margin: 2rem;
+    padding: 2rem;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+  }
 
 }
 
-.image{
-  border-radius: 10rem;
-  overflow: hidden;
-  padding-top: 10px;
-  border-image-slice: 80%;
-}
+.abt_about h3{
 
-.about .row{
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about .row .image{
-  flex: 5 5 67rem;
-}
-
-.about .row .image img{
-  width:85%;
-}
-
-.about .row .content{
-  flex: 1 1 40rem;
-  padding: 5rem;
-}
-
-.about .row .content h3{
   font-size: 3rem;
   color:#90EE90;
-  ;
+
 }
 
-.about .row .content p{
+.abt_about p{
+
   font-size: 1.3rem;
   color: #444;
   padding: 1rem 0;
   line-height: 1.6;
+
+}
+
+.abt_image img{
+  padding-top: 2rem;
+  filter: drop-shadow(10px 10px 4px #d6d5b7);
+  margin:0 auto;
+  width:900px auto;
+  height: 80dvh;
+  border-radius: 3rem;
+  
+  
 }
 
 .line{
 
   margin-top: 35px;
+  position: sticky;
   margin-bottom: 35px;
   width: 150px;
   height: 3px;
@@ -242,5 +272,69 @@ color: black;
 
 .carousel-inner{
 width:cover;
-height: 400px;
+height: 380px;
 }
+
+
+/* About history */ 
+
+
+
+.about_content h3{
+  font-size: 23px;
+  font-family:Georgia;
+  color: rgb(57, 109, 90);
+  font-weight: bold;
+  text-decoration:solid;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  text-decoration:underline;
+  text-align: center;
+
+}
+
+.about_container, .about_row, .about_content p{
+  font-size: 1.3rem;
+  color: #444;
+  padding: 1rem 0;
+  line-height: 1.6;
+  text-align:center;
+  
+}
+
+.about_image img{
+  padding-top: 2rem;
+  filter: drop-shadow(10px 10px 4px #d6d5b7);
+  margin:0 auto;
+  max-width: 100%;
+  border-radius: 3rem;
+ 
+}
+
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  color:  rgb(57, 109, 90);
+  text-decoration: underline;
+}
+
+.card-text{
+  text-align: center;
+  font-style: italic;
+  color: #444;
+}
+
+.container, .pt-4{
+
+  padding-top: 2rem;
+}
+
+#text_head{
+  color:rgb(57, 109, 90) !important;
+  filter: drop-shadow(5px 5px 5px rgb(134, 180, 134));
+}
+
+
+
+
+
