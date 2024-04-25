@@ -77,6 +77,19 @@ h1 {
   justify-content: center;
 }
 
+.game-page-container {
+  height: 100vh;
+  background: url('../images/whiskey-bottles.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 
 
 /* homepage wideview background IAN.G  */
@@ -151,6 +164,7 @@ h1 {
 /* footer IAN.G */
 .footer {
   background-color: #169b61eb;
+  background: cross-fade(50rem)
 }
 
 .social-icons {
@@ -161,7 +175,6 @@ color: black;
 .icon-3 img {
   margin-bottom: 5px;
 }
-
 
 /* Bestsellers carousel IAN.G */
 #bestsellerSlider .item {
@@ -215,3 +228,84 @@ color: black;
   border-radius: 6px;
 }
 
+/* About Us page - Jibin*/
+
+.sectction{
+  padding: 2rem 7%;
+}
+
+.heading{
+
+  text-align: center;
+  font-family:Brush Script MT;
+  color:#62d662;
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-top: 50px;
+  gap: 7rem;
+}
+
+.about{
+
+  padding-top: 150px;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-left: 80px;
+  background-image: url(../images/about7.jpg);
+  background-size:cover;
+  backdrop-filter:blur;
+
+}
+
+.image{
+  border-radius: 10rem;
+  overflow: hidden;
+  padding-top: 10px;
+  border-image-slice: 80%;
+}
+
+.about .row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .row .image{
+  flex: 5 5 67rem;
+}
+
+.about .row .image img{
+  width:85%;
+}
+
+.about .row .content{
+  flex: 1 1 40rem;
+  padding: 5rem;
+}
+
+.about .row .content h3{
+  font-size: 3rem;
+  color:#90EE90;
+  ;
+}
+
+.about .row .content p{
+  font-size: 1.3rem;
+  color: #444;
+  padding: 1rem 0;
+  line-height: 1.6;
+}
+
+.line{
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+  width: 150px;
+  height: 3px;
+  background:black;
+}
+
+.carousel-inner{
+width:cover;
+height: 400px;
+}

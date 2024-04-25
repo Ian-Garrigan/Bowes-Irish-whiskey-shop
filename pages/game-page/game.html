@@ -51,21 +51,79 @@
     </nav>
 
     <!-- Main page content - game page. Philip D.-->
+    <div class="container-fluid game-page-container">
+      <div class="visual-overlay">&nbsp;</div>
+      <div class="row">
+          <div class="col-12">
+              <section class="jumbotron text-center">                
+                <h1 class="jumbotron-header">"Tráth na gCeist"</h1>
+                <hr class="hr-orange">
+                <h4>Win a code for 10% off your first order with Bowes Irish Whiskey</h4>
+                <hr class="hr-orange">
+                <br/>
+                <p id="gamePromptText">Are you ready to put your whiskey knowledge to the test?</p><br/>                        
+                <span><button class="btn btn-md btn-success" id="gameButton" onclick="jsMiniGame()">Click here to play</button></span>
+                <br/><br/>
+                <hr class="hr-orange" id="gameOutputLine" style="display: none">
+                <h5 id="gameOutputHeading"></h5>
+                <br/>
+                <p id="gameOutputBody">
+                </p>
+                <button id="button" onclick="checkAnswer()" style="display:none"></button>
+              </section>
 
-    <div class="container">
+          </div>
+      </div>
+    </div>
+
+    
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container footer-container">
         <div class="row">
-            <div class="col-lg-3">                
+            <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-sm-start">
+                <div class="information">
+                    <h6 class="footer-heading text-uppercase text-white">Information</h6>
+                    <ul class="list-unstyled footer-link mt-4">
+                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus in harum architecto officia quos! Aliquam vero</li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-lg-4">   
-                <br/><br/><br/><br/>
-                <h5>Placeholder for Mini Javascript game</h5>             
-            </div>
-            <div class="col-lg-3">                
+            <div class="col-sm-6 col-md-4 mt-4 col-lg-2 text-sm-start">
+              <div class="social">
+                  <h6 class="footer-heading text-uppercase text-white">Social</h6>
+                  <ul class="list-inline my-4 social-icons">
+                    <li>
+                      <span class="icon-1"><i class="fa-brands fa-facebook"></i></span>
+                      <a href="#" title="Visit our Facebook page" target="_blank"></a>
+                    </li>
+                    <li>
+                      <span class="icon-2"><i class="fa-brands fa-instagram"></i></span>
+                      <a href="#" title="Visit our Instagram page" target="_blank"></a>
+                    </li>
+                    <li>
+                      <span class="icon-3"><box-icon name='trip-advisor' type='logo' ></box-icon></span>
+                      <a href="#" title=" Visit our TripAdvisor page" target="_blank"></a>
+                    </li>
+                </ul>
+              </div>
+          </div>
+            <div class="col-sm-6 col-md-6 mt-4 col-lg-4 text-sm-start">
+              <div class="contact">
+                  <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                  <address class="mt-4 m-0 text-white mb-1"><box-icon name='map-pin'></box-icon>&nbsp; 212 Richmond Rd, Drumcondra, Dublin</address>
+                  <a href="tel:+" class="text-white mb-1 text-decoration-none d-block"><box-icon type='solid' name='phone'></box-icon> &nbsp;(01) 840 3738</a>
+                  <a href="mailto:" class="text-white mb-1 text-decoration-none d-block"><box-icon type='solid' name='envelope'></box-icon> &nbsp;bowesirishwhiskey@gmail.com</a>
+              </div>
             </div>
         </div>
-    </div>
-    
-
+      </div>
+      <div class="text-center text-muted bg-light mt-3">
+          <p class="mb-0 fw-bold">2024 NCI Group Project</p>
+      </div>
+    </footer>
 
 
     <!-- Login modal. Reused code on each page from Ian G-->
