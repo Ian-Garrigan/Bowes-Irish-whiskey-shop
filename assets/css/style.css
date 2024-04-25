@@ -159,7 +159,7 @@ color: black;
 }
 
 .icon-3 img {
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 
@@ -171,7 +171,7 @@ color: black;
 
 #bestsellerSlider .item img{
   display: block;
-  width: 100%;
+  width: 67%;
   height: auto;
 }
 
@@ -181,3 +181,37 @@ color: black;
   height: 3px;
   background: #ff883e90;
 }
+
+.quoteblock {
+  padding: 10vh;
+  font-size: 2.1rem; 
+  color: #efefef;
+  font-family: "Roboto";
+}
+
+.quote {
+  font-size: 2rem;
+  font-family: "Roboto";
+}
+
+.progress-bar {
+  --scroll-y: 0;
+  position:sticky;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: transparent !important;
+  background: linear-gradient(to right, white calc(1% * var(--scroll-y)), transparent 0)
+}
+
+.audio-container {
+  background: linear-gradient(-16deg, #cb6220, #325344eb, #0b623deb, #cb6220);
+  padding: 20px;
+}
+
+.audio-option {
+  background-color: rgba(255, 255, 255, 0.356);
+  padding: 20px;
+  border-radius: 6px;
+}
+
