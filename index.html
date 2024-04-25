@@ -17,6 +17,8 @@
       <!-- bootstrap 4 css -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- openplayer js -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/openplayerjs/2.14.3/openplayer.min.css" integrity="sha512-Ni8axEYyMRovxIUS5IfdNYDt3fA9YCr44lgcCU4BRyfxNTUfxRYzCI2FDCLc4t21AXPa/lUQm7Ed1oom1NczzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <!-- owl carousel css -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -74,7 +76,7 @@
 
     <!-- Owl beta version, custom slider with jquery -->
     <div class="row no-gutters">
-      <div class="col my-5">
+      <div class="col my-5">  
         <h1 class="text-center">Bowes Bestsellers <span><h3>2024</h3></span></h1>
           <div class="container-fluid">
               <div class="row justify-content-center">
@@ -113,6 +115,41 @@
           </div>
       </div>
     </div>
+
+  <!--  IAN.G -->
+  <div class="container-fluid mt-5 audio-container">
+    <div class="progress-bar"></div>
+    <div class="row justify-content-around quotes-content">
+      <div class="col-5 audio-option ">
+          <p class="text-center">Play music while you shop and read our most beloved quotes</p>
+          <audio id="sound1" src="assets\audio\Whishey-You're-the-Devil.mp3" class="op-player op-player__media" controls playsinline></audio>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>What whiskey will not cure, there is no cure for.<span class="quote">&#x201d; - Irish proverb</span>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>Too much of anything is bad, but too much good whiskey is barely enough.<span class="quote">&#x201d; - Mark Twain</span>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>There is no bad whiskey. There are only some whiskeys that aren't as good as others.<span class="quote">&#x201d;</span>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>While I can’t walk on water, I can certainly wobble on whiskey.<span class="quote">&#x201d;</span>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>They say you can judge a man by how many friends he has. I make triple-distilled whiskey. Do the mathematics.<span class="quote">&#x201d;</span>
+      </div>
+      <div class="col-8 quoteblock">
+        <span class="quote">&#x201c;</span>Courage is a vitamin best swallowed with whiskey.<span class="quote">&#x201d; - Jarod Kintz</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="container m-5">
+      <div class="row justify-content-center">
+        <div class="col-6 text-center"><button>Temp</button></div>
+      </div>
+    </div>
   <!--  IAN.G -->
 
     <!-- Footer -->
@@ -139,16 +176,16 @@
                   <h6 class="footer-heading text-uppercase text-white">Social</h6>
                   <ul class="list-inline my-4 social-icons">
                     <li class="list-inline-item">
-                      <span class="icon-1"><i class="fa-brands fa-facebook"></i></span>
-                      <a href="#" title="Visit our Facebook page" target="_blank"></a>
+                      <span class="icon-1">
+                      <a href="www.facebook.com" alt="Visit our Facebook page" aria-labelledby="Facebook-icon" target="_blank"><i class="fa-brands fa-facebook text-dark"></i></a></span>
                     </li>
                     <li class="list-inline-item">
-                      <span class="icon-2"><i class="fa-brands fa-instagram"></i></span>
-                      <a href="#" title="Visit our Instagram page" target="_blank"></a>
+                      <span class="icon-2">
+                      <a href="www.instagram.com" alt="Visit our Instagram page" aria-labelledby="Instagram-icon" target="_blank"><i class="fa-brands fa-instagram text-dark"></i></a></span>
                     </li>
                     <li class="list-inline-item">
-                      <span class="icon-3"><img width="43" height="43" src="https://img.icons8.com/ios/43/tripadvisor.png" alt="tripadvisor"/></span>
-                      <a href="#" title=" Visit our TripAdvisor page" target="_blank"></a>
+                      <span class="icon-3">
+                      <a href="www.tripadvisor.com/ireland" alt="Visit our TripAdvisor page" aria-labelledby="TripAdvisor-icon" target="_blank"><img width="43" height="43" src="https://img.icons8.com/ios/43/tripadvisor.png" alt="tripadvisor"/></a></span>
                     </li>
                 </ul>
               </div>
@@ -156,7 +193,7 @@
         </div>
       </div>
       <div class="text-center text-muted bg-light mt-3">
-          <p class="mb-0 fw-bold">2024 NCI Group Project</p>
+          <p class="mb-0">2024 NCI Group Project</p>
       </div>
     </footer>
   <!--  IAN.G -->
@@ -240,6 +277,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- javascript file -->
     <script src="assets/javascript/script.js"></script>
+    <!-- OpenplayerJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openplayerjs/2.14.3/openplayer.min.js" integrity="sha512-yCO5CB176g0Qec3pXWZjdN/B+qnmcOvB+d36VoS42zhHAkhfxbm+g3zsInWgBHohsutoGUgo9reR8kbfc+OrWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- bootstrap 4 js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">

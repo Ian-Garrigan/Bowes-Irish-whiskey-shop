@@ -25,6 +25,7 @@ $(document).ready(function() {
       center: true,
       nav: true,
       lazyLoad: true,
+      loop: true,
     //   fontawesome html injection
       navText: ['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
       autoplay: true,
@@ -58,6 +59,18 @@ $(document).ready(function() {
     }
 });
 
+// IAN.G quotes progression indicator
+var content = document.querySelector(".quotes-content");
+var progressBar = document.querySelector(".progress-bar");
+
+window.addEventListener("scroll", function() {
+  var contentScrolled = window.scrollY - content.offsetTop + window.innerHeight;
+  var percentageScrolled = contentScrolled / content.offsetHeight * 100;
+
+  if (window.scrollY > content.offsetTop)
+    progressBar.style.setProperty("--scroll-y", percentageScrolled);
+  else progressBar.style.setProperty("--scroll-y", 0);
+});
 
 function jsMiniGame()
 {   
