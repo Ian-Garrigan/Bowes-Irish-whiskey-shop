@@ -72,6 +72,22 @@ window.addEventListener("scroll", function() {
   else progressBar.style.setProperty("--scroll-y", 0);
 });
 
+// FAQ functionality IAN.G
+
+const faq = document.querySelectorAll(".faq-buttons");
+function toggleAccordion() {
+  const questionToggled = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < faq.length; i++) {
+    faq[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (questionToggled == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+faq.forEach(question => question.addEventListener('click', toggleAccordion));
+
 function jsMiniGame()
 {   
     
@@ -181,4 +197,3 @@ function gameWonDOMUpdates()
     document.getElementById("gameOutputBody").innerHTML="Your voucher code is <br/> <strong>BOWES10</strong>";
     document.getElementById("gameOutputBody").style.display="block";
 }
-
