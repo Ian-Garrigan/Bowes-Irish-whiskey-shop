@@ -219,6 +219,8 @@ color: black;
 .audio-container {
   background: linear-gradient(-16deg, #cb6220, #325344eb, #0b623deb, #cb6220);
   padding: 20px;
+  border-radius: 6px;
+  margin: 0 auto !important;
 }
 
 .audio-option {
@@ -339,10 +341,26 @@ width:cover;
 height: 380px;
 }
 
+
+/* IAN.G */
+.faq-bg {
+  background: url('../images/whiskey-bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .faq-container {
-  padding: 3rem;
+  padding: 1rem;
   width: 55rem;
   margin: 0 auto;
+  background-color: rgba(241, 241, 241, 0.917);
+  border-radius: 5px;
 }
 
 .faq-container h2 {
@@ -356,14 +374,14 @@ height: 380px;
   button {
     position: relative;
     width: 100%;
-    margin: 6px;
+    margin-bottom: 6px;
     padding: 20px 7px;
     border-radius: 2px;
     color: rgb(36, 37, 37);
     text-align: left;
     font-size: 18px;
     border: transparent;
-    background: rgba(46, 225, 76, 0.194);
+    background: rgba(46, 225, 76, 0.319);
     outline: none;
     &:hover, &:focus {
       cursor: pointer;
@@ -378,7 +396,7 @@ height: 380px;
   button[aria-expanded='true'] { +
    .accordion-content {
     opacity: 1;
-    max-height: 7em;
+    max-height: 20em;
   }
   }
   .accordion-content {
@@ -391,9 +409,8 @@ height: 380px;
   }
 }
 
-/* About history */ 
 
-
+/* About history */
 
 .about_content h3{
   font-size: 23px;
