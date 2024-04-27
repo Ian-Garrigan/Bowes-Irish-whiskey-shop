@@ -66,7 +66,7 @@ h1 {
 }
 
 .contact-page-container {
-  background: url('../images/whiskey-barrels.jpg') no-repeat center center fixed;
+  background: url('../images/whiskey-barrels.webp') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -79,7 +79,7 @@ h1 {
 
 .game-page-container {
   height: 100vh;
-  background: url('../images/whiskey-bottles.jpg') no-repeat center center fixed;
+  background: url('../images/whiskey-bottles.webp') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -197,7 +197,7 @@ color: black;
 .quoteblock {
   padding: 10vh;
   font-size: 2.1rem; 
-  color: #efefef;
+  color: #1a1a1ae7;
   font-family: "Roboto";
 }
 
@@ -216,8 +216,8 @@ color: black;
   background: linear-gradient(to right, white calc(1% * var(--scroll-y)), transparent 0)
 }
 
-.audio-container {
-  background: linear-gradient(-16deg, #cb6220, #325344eb, #0b623deb, #cb6220);
+.audio-quotes-container {
+  background: linear-gradient(-16deg, #cb622061, #32534455, #0b623c4c, #cb62205b);
   padding: 20px;
   border-radius: 6px;
   margin: 0 auto !important;
@@ -249,7 +249,7 @@ color: black;
 @media(min-width:768px){
   #abt_about, .abt_about{
 
-    background:url('../images/about7.jpg') no-repeat center center fixed;
+    background:url('../images/about7.webp') no-repeat center center fixed;
     height:100%;
     position:relative;
     -webkit-background-size: cover;
@@ -344,7 +344,7 @@ height: 380px;
 
 /* IAN.G */
 .faq-bg {
-  background: url('../images/whiskey-bg.jpg') no-repeat center center fixed;
+  background: url('../images/whiskey-bg.webp') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
