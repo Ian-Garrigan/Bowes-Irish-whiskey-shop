@@ -47,7 +47,7 @@
             </ul>
         </div>
 
-        <div class="d-none d-md-block">
+        <div class="d-none d-md-block" id="display-usr">
             <p class="active navbar-text my-auto mr-2"><i>We stock Ireland's finest whiskey.</i>
             </p>
             <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
@@ -124,7 +124,7 @@
           </div>
       </div>
     </div>
-    <!-- IAN.G -->
+    <!-- IAN.G CTO cards-->
     <div class="row justify-content-center no-gutters">
       <div class="col-lg-5 col-sm-10">
         <div class="card text-center m-5 bg-light" style="max-width: 500px; border: none;">
@@ -154,14 +154,14 @@
               <div class="card-body">
                 <h5 class="card-title">Explore Bowes online gallery</h5>
                 <p class="card-text">Bowes collection of over 130 different whiskey brands will not disappoint. Our team has curated some of their personal favourites for you to browse over.</p>
-                <a href="pages/gallery-page/gallery.html" class="mt-4 btn btn-success">View</a>
+                <a href="#" class="mt-4 btn btn-success">View</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  <!--  IAN.G -->
+  <!--  IAN.G audio & quotes-->
   <div class="container mt-5 mb-5 audio-quotes-container">
     <div class="progress-bar"></div>
     <div class="row justify-content-around quotes-content text-center">
@@ -243,35 +243,48 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Sign-up to reciece loyalty rewards and our monthly newsletter!</h5>
+            <h5 id="success-message" class="modal-title">Sign-up to reciece loyalty rewards and our monthly newsletter!</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <!-- <div id="success-message"></div> -->
           <div class="modal-body">
-            <form>
+            <form name="modal-form" id="validate-modal" action="#" method="#" >
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" id="username">
+                  <small class="form-text text-muted">Alphanumeric characters, underscores, or dashes.</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input name="email" class="form-control" aria-describedby="emailHelp" id="email">
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                  <label for="first-password">Password</label>
-                  <input type="password" class="form-control" id="first-password">
+                  <label for="username">Phone Number</label>
+                  <input name="phone" class="form-control" id="phone-num">
+                  <small class="form-text text-muted">Numeric values only. Not Required.</small>
                 </div>
                 <div class="form-group">
-                  <label for="repeat-password">Password</label>
-                  <input type="password" class="form-control" id="repeat-password" placeholder="Reapeat Password">
+                  <label for="first-password">Password</label>
+                  <input name="password minlenght" class="form-control" id="password">
+                  <small class="form-text text-muted">Minimum password lenght is 10 characters</small>
+                </div>
+                <div class="form-group">
+                  <label for="repeat-password">Confirm Password</label>
+                  <input name="password_confirm" class="form-control" id="repeat-password">
                 </div>
                 <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  <input type="checkbox" name="permission_checkbox" class="form-check-input" id="tos-checkbox">
+                  <label class="form-check-label" for="tos-checkbox">Please check the box to agree to our Terms of Service.</label>
+                </div>
+                <div class="error-div text-danger mb-2"></div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button submit" name="submit" class="btn btn-success">Sign Up</button>
                 </div>
               </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Sign Up</button>
           </div>
         </div>
       </div>
@@ -313,6 +326,10 @@
     </div>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- form validation library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+    integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- owl carousel js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- javascript file -->
