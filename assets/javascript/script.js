@@ -1,4 +1,4 @@
-// Javascript on submission of contact form
+// Javascript on submission of contact form - Philip D.
 function contactForm()
 {
     event.preventDefault;
@@ -88,21 +88,25 @@ function toggleAccordion() {
 }
 faq.forEach(question => question.addEventListener('click', toggleAccordion));
 
+
+
+// Javascript for JS minigame - Philip D.
+
 function jsMiniGame()
 {   
     
     // Define set of questions and answers
     const questions = ["Which country produces the largest amount of whiskey per year by volume?",
-    "What is the world's most popular brand of whiskey?",
-    "What gives whiskey its distinctive color",
-    "What is the general proof of whiskey?",
-    "Which takes longer to age: Green Spot or Yellow Spot whiskey"];
+    "What is the world's most popular brand of whiskey in Ireland?",
+    "From what Irish word is the work Whiskey derived?",
+    "What is the general proof of Irish whiskey?",
+    "How many years is Green Spot matured for?"];
     
-    const answers = ["Scotland",
-    "Powers",
-    "Tannins",
+    const answers = ["India",
+    "Jameson",
+    "Uisce",
     "80",
-    "Green Spot"];
+    "10"];
 
     // Generate three unique random numbers within the rang of integers corresponding to the number of questions available
     num1 = Math.floor(Math.random() * questions.length);
