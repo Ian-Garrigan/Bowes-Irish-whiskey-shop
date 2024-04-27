@@ -3,7 +3,8 @@ function contactForm()
 {
     event.preventDefault;
     firstName = document.getElementById("firstName").value;
-    if (firstName == "")
+    emailAddress = document.getElementById("emailAddress").value;
+    if (firstName == "" || emailAddress== "")
         {
         alert("Please enter a first name and email address so we can best respond to your query. Thank you.");
     }
