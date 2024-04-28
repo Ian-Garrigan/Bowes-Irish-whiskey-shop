@@ -203,8 +203,8 @@ function gameWonDOMUpdates()
     document.getElementById("gameOutputBody").style.display="block";
 }
 
-// Modal form validation using customized Validate.js 2.0.1 library IAN.G
-var validator = new FormValidator('validate-modal', [{
+// SIGN UP Modal form validation using customized Validate.js 2.0.1 library IAN.G
+var validator = new FormValidator('validate-sign-up-modal', [{
   name: 'username',
   display: 'Username',
   rules: 'required'
@@ -250,44 +250,94 @@ var validator = new FormValidator('validate-modal', [{
   }
 });
 
+
 function submitForm() {
   var name = document.getElementById("username").value;
+  var loginName = document.getElementById("login-username").value;
   var email = document.getElementById("email").value;
   var phoneNum = document.getElementById("phone-num").value;
-
+  
   // hide form
-  document.getElementById("validate-modal").style.display = "none";
-
-  // display message
+  document.getElementById("validate-sign-up-modal").style.display = "none";
+  document.getElementById("validate-login-modal").style.display = "none";
+  
+  // display sign up message
   var messageDiv = document.getElementById("success-message");
   messageDiv.innerHTML = `
   <div>
-      Hi,
-      <span style="color: blue; font-weight: 700;">
-      ${name}
-      </span>
-      you have successfully signed up!
-      We will be in touch via your email:
-      <span style="color: green; font-weight: 700;">
-      ${email}
-      </span> and phone number: <span style="color: orange; font-weight: 700;">
-      ${phoneNum}.
-      </span> 
-      <br><br>Thank you for becoming a user of the Bowes Irish Whiskey website.
+  Hi,
+  <span style="color: blue; font-weight: 700;">
+  ${name}
+  </span>
+  you have successfully signed up!
+  We will be in touch via your email:
+  <span style="color: green; font-weight: 700;">
+  ${email}
+  </span> and phone number: <span style="color: orange; font-weight: 700;">
+  ${phoneNum}.
+  </span> 
+  <br><br>Thank you for becoming a user of the Bowes Irish Whiskey website.
   </div>`;
 
   var displayUser = document.getElementById("display-usr");
   displayUser.innerHTML = `<div >
-  <h6 class="text-white">Welcome, <span class="text-dark">${name}</span> you are logged in.</h6>`;
+  <h6 class="text-white">Welcome, <span class="text-dark">${name}${loginName}</span> you are logged in.</h6>`;
+
+  // display login message
+  var loginMessageDiv = document.getElementById("login-message");
+  loginMessageDiv.innerHTML = `
+  <div>
+  Welcome back,
+  <span style="color: blue; font-weight: 700;">
+  ${loginName}
+  </span>
+  you are now logged in.
+  </div>`;
+  
 }
 
 // Add event listener for form submission
-document.getElementById("validate-modal").addEventListener("submit", function(event) {
-
+document.getElementById("validate-sign-up-modal").addEventListener("submit", function(event) {
+  
   // way to stop page reloading on submission
   event.preventDefault();
 });
 
+document.getElementById("validate-login-modal").addEventListener("submit", function(event) {
+  
+  event.preventDefault();
+});
+
+// LOGIN Modal form validation using customized Validate.js 2.0.1 library IAN.G
+var validator = new FormValidator('validate-login-modal', [{
+  name: 'login-username',
+  display: 'Username',
+  rules: 'required'
+}, {
+  name: 'password',
+  display: 'Password',
+  rules: 'required|min_length[10]'
+}], function(errors, event) {
+  if (errors.length > 0) {
+      var errorString = '';
+
+      for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+          errorString += errors[i].message + '<br/>';
+      }
+
+      // Get reference to the error div
+      var loginErrorDiv = document.querySelector('.login-error-div');
+
+      // Check if the error div exists
+      if (loginErrorDiv) {
+          // Set inner HTML of error div to display error messages
+          loginErrorDiv.innerHTML = errorString;
+      }
+  } else {
+      // If no errors submit form
+      submitForm();
+  }
+});
 
 // IAN.G
 // back to top button 
