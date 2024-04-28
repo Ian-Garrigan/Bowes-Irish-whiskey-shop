@@ -19,12 +19,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
-    <title> Bowes Whiskey Shop</title>
+    <title>Bowes | Mini Game</title>
 </head>
 
 <body>
     <!--Nav-->
-    <nav class="navbar navbar-dark navbar-expand-sm">
+    <nav class="navbar navbar-dark navbar-expand-lg">
         <a href="/" class="navbar-brand">
             Bowes Irish whiskey</a>
         <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -32,114 +32,170 @@
             <span class="navbar-toggler-icon"></span></button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item mr-2"><a class="nav-link" href="../../index.html">Home</a></li>
+            <ul class="navbar-nav mr-auto">                
                 <li class="nav-item mr-2"><a class="nav-link" href="../about-page/about.html">About</a></li>
                 <li class="nav-item mr-2"><a class="nav-link" href="../product-page/products.html">Products</a></li>
                 <li class="nav-item mr-2"><a class="nav-link" href="../contact-page/contact.html">Contact Us</a></li>
                 <li class="active nav-item mr-2"><a class="nav-link" href="#">Play to Win</a></li>
-                <li class="nav-item mr-2 d-block d-sm-none"><button type="button" class="nav-link btn" data-toggle="modal" data-target="#signupmodal">Sign Up</button></li>
-                <li class="nav-item mr-2 d-block d-sm-none"><button type="button" class="nav-link btn" data-toggle="modal" data-target="#loginmodal">login</button></li>
+                <li class="nav-item mr-2"><a class="nav-link" href="../gallery-page/gallery.html">Gallery</a></li>                
             </ul>
         </div>
 
         <div class="d-none d-md-block">
             <p class="active navbar-text my-auto mr-2"><i>Online shop now open! We stock Ireland's finest whiskey.</i>
             </p>
-            <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
-            <a href="#" class="btn btn--cta btn-orange" data-toggle="modal" data-target="#loginmodal">Login</a>
         </div>
     </nav>
 
     <!-- Main page content - game page. Philip D.-->
+    <div class="container-fluid game-page-container">
+      <div class="visual-overlay">&nbsp;</div>
+      <div class="row">
+          <div class="col-12">
+              <section class="jumbotron text-center">                
+                <h1 class="jumbotron-header">"Tráth na gCeist"</h1>
+                <hr class="hr-orange">
+                <h4>Win a code for 10% off your first order with Bowes Irish Whiskey</h4>
+                <hr class="hr-orange">
+                <br/>
+                <p id="gamePromptText">Are you ready to put your whiskey knowledge to the test?</p><br/>                        
+                <span><button class="btn btn-md btn-success" id="gameButton" onclick="jsMiniGame()">Click here to play</button></span>
+                <br/><br/>
+                <hr class="hr-orange" id="gameOutputLine" style="display: none">
+                <h5 id="gameOutputHeading"></h5>
+                <br/>
+                <p id="gameOutputBody">
+                </p>
+                <button id="button" onclick="checkAnswer()" style="display:none"></button>
+              </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">                
-            </div>
-            <div class="col-lg-4">   
-                <br/><br/><br/><br/>
-                <h5>Placeholder for Mini Javascript game</h5>             
-            </div>
-            <div class="col-lg-3">                
-            </div>
-        </div>
+          </div>
+      </div>
     </div>
+
     
+   <!--  IAN.G -->
 
-
-
-    <!-- Login modal. Reused code on each page from Ian G-->
-
-    <div class="modal" tabindex="-1" id="loginmodal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Bowes Irish Whiskey Shop</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 mt-4 col-lg-3 text-sm-start">
+                <div class="information">
+                    <h6 class="footer-heading text-uppercase text-white">ALWAYS DRINK RESPONSIBLY</h6>
+                    <span> At Bowes, we are committed to promoting responsible drinking practices, ensuring that our customers can savor the rich heritage of Irish whiskey in a safe and enjoyable manner.</span><br><br>
+                    <a href="https://www.drinkaware.ie/" target="_blank"><img src="../../assets/images/drinkaware-logo.png" alt="Drinkaware logo" class="img-fluid"></a>
+                </div>
             </div>
-            <div class="modal-body">
-              <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  </div>
-                  <div class="form-group">
-                    <label for="first-password">Password</label>
-                    <input type="password" class="form-control" id="first-password">
-                  </div>
-                  <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                  </div>
-                </form>
+            <div class="col-sm-6 col-md-6 mt-4 col-lg-4 text-sm-start">
+              <div class="contact">
+                <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                <address class="mt-4 m-0 text-white mb-1"><box-icon name='map-pin'></box-icon>&nbsp; 212 Richmond Rd, Drumcondra, Dublin</address>
+                <a href="tel:+" class="text-white mb-1 text-decoration-none d-block"><box-icon type='solid' name='phone'></box-icon> &nbsp;(01) 840 3738</a>
+                <a href="mailto:bowesirishwhiskey@gmail.com" class="text-white mb-1 text-decoration-none d-block"><box-icon type='solid' name='envelope'></box-icon> &nbsp;bowesirishwhiskey@gmail.com</a>
+              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success">Login</button>
-            </div>
+            <div class="col-sm-6 col-md-4 mt-4 col-lg-2 text-sm-start">
+              <div class="social">
+                  <h6 class="footer-heading text-uppercase text-white">Social</h6>
+                  <ul class="list-inline my-4 social-icons">
+                    <li class="list-inline-item">
+                      <span class="icon-1">
+                      <a href="www.facebook.com" alt="Visit our Facebook page" aria-labelledby="Facebook-icon" target="_blank"><i class="fa-brands fa-facebook text-dark"></i></a></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-2">
+                      <a href="www.instagram.com" alt="Visit our Instagram page" aria-labelledby="Instagram-icon" target="_blank"><i class="fa-brands fa-instagram text-dark"></i></a></span>
+                    </li>
+                    <li class="list-inline-item">
+                      <span class="icon-3">
+                      <a href="www.tripadvisor.com/ireland" alt="Visit our TripAdvisor page" aria-labelledby="TripAdvisor-icon" target="_blank"><img width="43" height="43" src="https://img.icons8.com/ios/43/tripadvisor.png" alt="tripadvisor"/></a></span>
+                    </li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>
+      <div class="text-center text-muted bg-light mt-3">
+          <p class="mb-0">2024 NCI Group Project</p>
+      </div>
+    </footer>
+
+  <!--  IAN.G -->
+
+    <!-- sign up modal -->
     <div class="modal" tabindex="-1" id="signupmodal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Sign-up to reciece loyalty rewards and our monthly newsletter!</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="first-password">Password</label>
-                    <input type="password" class="form-control" id="first-password">
-                  </div>
-                  <div class="form-group">
-                    <label for="repeat-password">Password</label>
-                    <input type="password" class="form-control" id="repeat-password" placeholder="Reapeat Password">
-                  </div>
-                  <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                  </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success">Sign Up</button>
-            </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sign-up to reciece loyalty rewards and our monthly newsletter!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="first-password">Password</label>
+                  <input type="password" class="form-control" id="first-password">
+                </div>
+                <div class="form-group">
+                  <label for="repeat-password">Password</label>
+                  <input type="password" class="form-control" id="repeat-password" placeholder="Reapeat Password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Sign Up</button>
           </div>
         </div>
       </div>
+    </div>
+    <!--  IAN.G -->
+
+    <!-- login modal -->
+    <div class="modal" tabindex="-1" id="loginmodal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Bowes Irish Whiskey Shop</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="first-password">Password</label>
+                  <input type="password" class="form-control" id="first-password">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <!-- Javascript -->
       <script src="../../assets/javascript/script.js"></script>

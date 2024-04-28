@@ -7,8 +7,8 @@
 }
 
 /* Google font */
-body, p, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif !important;
+body {
+  font-family: "Roboto", "Open Sans", sans-serif !important;
 }
 
 h1 {
@@ -45,7 +45,6 @@ h1 {
   font-size: 14px;
 }
 
-
 .btn--cta.btn-orange:hover,
 .btn--cta.btn-orange:active,
 .btn--cta.btn-orange:focus,
@@ -66,7 +65,21 @@ h1 {
 }
 
 .contact-page-container {
-  background: url('../images/whiskey-barrels.jpg') no-repeat center center fixed;
+  background: url('../images/whiskey-barrels.webp') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* Added in as part of work on game-page in particular, Philip D. Leverages work done by Ian G. in relation to the background image and visual overlay */
+.game-page-container {
+  height: 100vh;
+  background: url('../images/whiskey-bottles.webp') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -151,7 +164,6 @@ h1 {
 /* footer IAN.G */
 .footer {
   background-color: #169b61eb;
-  background: cross-fade(50rem)
 }
 
 .social-icons {
@@ -159,8 +171,62 @@ font-size: 30px;
 color: black;
 }
 
-.icon-3 img{
-  margin-bottom: 7px;
+.icon-3 img {
+  margin-bottom: 5px;
+}
+
+/* Bestsellers carousel IAN.G */
+#bestsellerSlider .item {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+#bestsellerSlider .item img{
+  display: block;
+  width: 67%;
+  height: auto;
+}
+
+#bar {
+  width: 0%;
+  max-width: 100%;
+  height: 3px;
+  background: #ff883e90;
+}
+
+.quoteblock {
+  padding: 10vh;
+  font-size: 2.1rem; 
+  color: #1a1a1ae7;
+  font-family: "Roboto";
+}
+
+.quote {
+  font-size: 2rem;
+  font-family: "Roboto";
+}
+
+.progress-bar {
+  --scroll-y: 0;
+  position:sticky;
+  top: 0;
+  left: 0;
+  height: 12px;
+  background-color: transparent !important;
+  background: linear-gradient(to right, rgba(35, 130, 25, 0.815) calc(1% * var(--scroll-y)), transparent 0)
+}
+
+.audio-quotes-container {
+  background: linear-gradient(-16deg, #cb622061, #32534455, #0b623c4c, #cb62205b);
+  padding: 20px;
+  border-radius: 6px;
+  margin: 0 auto !important;
+}
+
+.audio-option {
+  background-color: rgba(255, 255, 255, 0.356);
+  padding: 20px;
+  border-radius: 6px;
 }
 
 /* About Us page - Jibin*/
@@ -183,7 +249,7 @@ color: black;
 @media(min-width:768px){
   #abt_about, .abt_about{
 
-    background:url('../images/about7.jpg') no-repeat center center fixed;
+    background:url('../images/about7.webp') no-repeat center center fixed;
     height:100%;
     position:relative;
     -webkit-background-size: cover;
@@ -280,9 +346,73 @@ height:380px;
 }
 
 
-/* About history */ 
+/* IAN.G */
+.faq-bg {
+  background: url('../images/whiskey-bg.webp') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  padding: 1rem;
+  background-color: rgba(241, 241, 241, 0.865);
+  border-radius: 5px;
+}
+
+.faq-container h2 {
+  color: #28a36d;
+}
+
+.accordion {
+  .accordion-question {
+    border-bottom: 3px solid #90EE90;
+  }
+  button {
+    position: relative;
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 15px;
+    border-radius: 2px;
+    color: rgb(36, 37, 37);
+    text-align: left;
+    font-size: 17px;
+    border: transparent;
+    background: rgba(46, 225, 76, 0.319);
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      &::after {
+        cursor: pointer;
+      }
+    }
+    box-icon {
+      margin-right: 1.5rem;
+    }
+  }
+  button[aria-expanded='true'] { +
+   .accordion-content {
+    opacity: 1;
+    max-height: 20em;
+  }
+  }
+  .accordion-content {
+    overflow: hidden;
+    opacity: 0;
+    color: black;
+    max-height: 0.5em;
+    transition: opacity 500ms , max-height 500ms;
+    text-align: justify;
+  }
+}
 
 
+/* About history */
 
 .about_content h3{
   font-size: 23px;
@@ -340,7 +470,26 @@ text-decoration: underline;
   filter: drop-shadow(5px 5px 5px rgb(134, 180, 134));
 }
 
+.back-to-top {
+  color: #181818;
+  position: fixed;
+  left: 1rem;
+  bottom: 7rem;
+  width: 50px;
+}
 
+.hidden {
+  display: none;
+}
+
+/* Minor gallery style adjustments IAN.G */
+.gallery-content {
+  margin: 10px;
+}
+
+.gallery-content img {
+  border-radius: 2px;
+}
 
 /* Product Page -Jibin T */
 
@@ -398,6 +547,7 @@ text-decoration: underline;
   font-size:20px;
 
 }
+
 
 
 
@@ -475,10 +625,4 @@ text-decoration: underline;
   text-align:left;
 
 }
-
-
-
-
-
-
 
