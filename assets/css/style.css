@@ -470,11 +470,19 @@ height: 380px;
 .back-to-top {
   color: #181818;
   position: fixed;
-  left: 1.4rem;
-  bottom: 2.5rem;
-  width: 45px;
+  left: 1rem;
+  bottom: 7rem;
+  width: 50px;
 }
 
 .hidden {
   display: none;
+}
+
+.gallery-content {
+  margin: 10px;
+}
+
+.gallery-content img {
+  border-radius: 2px;
 }
