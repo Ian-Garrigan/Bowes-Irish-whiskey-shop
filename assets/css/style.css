@@ -236,7 +236,7 @@ color: black;
 .abt_about h3{
 
   font-size: 3rem;
-  color:#90EE90;
+  color: rgb(57, 109, 90);
 
 }
 
@@ -315,17 +315,19 @@ height:380px;
  
 }
 
-.card-title{
-  text-align: center;
+#butn_green{
+
+color: rgb(31, 90, 13);
+font-weight: bold;
+text-decoration: underline;
+}
+
+#cust_btn{
+  text-align: center !important;
+  font-style: italic;
   font-weight: bold;
   color:  rgb(57, 109, 90);
   text-decoration: underline;
-}
-
-.card-text{
-  text-align: center;
-  font-style: italic;
-  color: #444;
 }
 
 .container, .pt-4{
