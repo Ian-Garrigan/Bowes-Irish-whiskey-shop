@@ -45,7 +45,6 @@ h1 {
   font-size: 14px;
 }
 
-
 .btn--cta.btn-orange:hover,
 .btn--cta.btn-orange:active,
 .btn--cta.btn-orange:focus,
@@ -358,9 +357,7 @@ height: 380px;
 
 .faq-container {
   padding: 1rem;
-  width: 55rem;
-  margin: 0 auto;
-  background-color: rgba(241, 241, 241, 0.917);
+  background-color: rgba(241, 241, 241, 0.865);
   border-radius: 5px;
 }
 
@@ -376,11 +373,11 @@ height: 380px;
     position: relative;
     width: 100%;
     margin-bottom: 6px;
-    padding: 20px 7px;
+    padding: 15px;
     border-radius: 2px;
     color: rgb(36, 37, 37);
     text-align: left;
-    font-size: 18px;
+    font-size: 17px;
     border: transparent;
     background: rgba(46, 225, 76, 0.319);
     outline: none;
