@@ -16,6 +16,25 @@ function contactForm()
 }
 
 
+//Event registration form - Jibin T//
+
+function registerForm()
+{
+    event.preventDefault;
+    emailAddress = document.getElementById("emailAddress").value;
+    if (emailAddress == "" )
+        {
+        alert("Please enter a valid email address so we can best respond to your query. Thank you.");
+    }
+    else 
+    {
+        alert("Thank you for contacting us, we will be in touch as soon.");
+    }
+    
+}
+
+
+
 // customized owl carousel library functionality IAN.G
 $(document).ready(function() {
 
@@ -362,3 +381,4 @@ const goToTop = () => {
 };
 
 backToTopButton.addEventListener("click", goToTop)
+

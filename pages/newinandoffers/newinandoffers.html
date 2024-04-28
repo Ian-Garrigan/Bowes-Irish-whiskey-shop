@@ -54,38 +54,79 @@
         </div>
     </nav>
 
+    <!-- About Us page  -->
+    <h1 id="extend_heading">Bowes Irish whiskey</h1>
+     
+    <section class="extend_about" id="extend_about">
+        <div class="extend_row">
+          <div class="extend_image">
+            <img src="../../assets/images/bows.jpg" alt="about">
+        </div>
+        <div id="extend_content" class="extend_content">
+            <h3>OUR COMPANY</h3>
+            <p>Since our founders Adam and John shipped their first orders back in 2004, our business grew from a two-man operation to the world’s leading retailer of premium spirits.</p>
+            <p>From the day the The Bowes Irish Whiskey came online, we’ve sought to build a global community that’s as passionate about quality drinks as we are. We believe in sharing our collective knowledge, encouraging exploration, and championing producers we’re passionate about. Whether you’re visiting our website, attending our events, or shopping in one of our bricks-and-mortar locations, we’ll always find the best bottles for you.</p>
+        </div>
+    </div>
+  </section>
+
+<!-- End About Us form -->
+
+  <!-- About history-->
+
+<section class="about_container" id="about_container">
+    <div class="about_row">
+        <div class="about_image">
+          <img src="../../assets/images/content.jpg" alt="">
+        </div>
+       <div class="about_content">
+            <h3>OUR RANGE</h3>
+            <p>We’re a team of enthusiasts and there’s nothing we love more than sharing a glass of something good. Our search for new flavours has led us all over the world, where we’ve found treasures in the unknown, the overlooked and the underrated. The range we offer is neatly curated yet diverse with a continuously-evolving selection of old & rare spirits, exclusive bottlings and new releases.</p><br>
+            <p>Anyone who’s ever filled a cask or laid down a bottle knows that the drinks business is all about planning for tomorrow. As we go forward, we want to grow the community we’ve built in our first two decades and continue to improve our customer experience. We’ve always been early adopters and we will continue to expand our charitable efforts and our commitment to sustainability. There’s always a new spirit to discover, a new producer to get to know, or a new cocktail to make and we look forward to sharing them all with you.</p>
+        </div>
+    </div>
+  </section>
+
 
 
 
    <!--New In & Offers About page bottom boday part   / Jibin T-->
 
  <div class="container .pt-4">
-    <h1 class="disply-3 text-center text-muted my-4" id="text_head">NEW In & OFFERS</h1>
+    <h1 class="disply-3 text-center text-muted my-4" id="text_head">NEW EVENTS</h1>
     <div class="row">
       <div class="col-md-6 col-lg-4">
         <div class="card mb-3">
-          <img src="../../assets/images/about20.jpg" class="card-img-top" alt="" height="340">
+          <img src="../../assets/images/Carl.png" class="card-img-top" alt="" height="340">
           <div class="card-body" id="cust_btn">
-            <a href="../Menu/meu.html"class="btn" id="butn_green">STOCK</a>
-            <p class="card-text">London store full to the brim with great drink</p>
+            <h6 id="butn_green">RUM RAGGED</h6>
+            <p class="card-text">Experience the music with the exceptional RUM, Whiskey. Register your Interest Below.</p>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="emailAddress">Email</label>
+              <input type="email" class="form-control" id="emailAddress" placeholder="Email Address" required>   
+              <small id="emailHelp" class="form-text">Please enter your email address</small>                    
+            </div>
+            <button type="submit" class="btn btn-primary" id="butn_green" onclick="registerForm()">Register</button>
+            </form>
+            
           </div>
         </div>
       </div>
       <div class="col-md-6 col-lg-4">
         <div class="card mb-3">
-          <img src="../../assets/images/about25.jpg" class="card-img-top" alt="" height="340">
+          <img src="../../assets/images/Whisk_show.jpg" class="card-img-top" alt="" height="340">
           <div class="card-body" id="cust_btn">
-            <a href="../newinandoffers/newinandoffers.html" class="cust_btn btn" id="butn_green">EVENTS</a>
-            <p class="card-text">Award-winning annual spirits showcases</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-3">
-          <img src="../../assets/images/about21.jpg" class="card-img-top" alt="..." height="340">
-          <div class="card-body" id="cust_btn">
-            <a href="../newinandoffers/newinandoffers.html" class="cust_btn btn" id="butn_green">AWARDS</a>
-            <p class="card-text">Our virtual award & trophy shelf! Cheers!!</p>
+            <h6 id="butn_green">Whiskey Show</h6>
+            <p class="card-text">Whiskey Show, the Dublin's most popular whiskey festival, Register your interest below. </p>
+            <form id="contactForm">
+             <div class="form-group">
+               <label for="emailAddress">Email</label>
+               <input type="email" class="form-control" id="emailAddress" placeholder="Email Address" required>   
+               <small id="emailHelp" class="form-text">Please enter your email address</small>                    
+             </div>
+             <button type="submit" class="btn btn-primary" id="butn_green" onclick="registerForm()">Register</button>
+            </form>
           </div>
         </div>
       </div>
@@ -237,6 +278,8 @@
         </div>
       </div>
     </div>
+    <!-- Javascript -->
+    <script src="../../assets/javascript/script.js"></script>
 
         <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
