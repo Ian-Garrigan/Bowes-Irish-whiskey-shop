@@ -16,7 +16,7 @@ function contactForm()
 }
 
 
-// customized owl carousel functionality IAN.G
+// customized owl carousel library functionality IAN.G
 $(document).ready(function() {
 
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
     }
 });
 
-// IAN.G quotes progression indicator
+// IAN.G quotes progression indicator based on https://codepen.io/vivensio/pen/qmrzrw
 var content = document.querySelector(".quotes-content");
 var progressBar = document.querySelector(".progress-bar");
 
@@ -73,7 +73,7 @@ window.addEventListener("scroll", function() {
   else progressBar.style.setProperty("--scroll-y", 0);
 });
 
-// FAQ functionality IAN.G
+// FAQ functionality to enable accordion dropdown on click based on https://codepen.io/kathykato/pen/MoZJom IAN.G
 
 const faq = document.querySelectorAll(".faq-buttons");
 function toggleAccordion() {
@@ -202,3 +202,113 @@ function gameWonDOMUpdates()
     document.getElementById("gameOutputBody").innerHTML="Your voucher code is <br/> <strong>BOWES10</strong>";
     document.getElementById("gameOutputBody").style.display="block";
 }
+
+// Modal form validation using customized Validate.js 2.0.1 library IAN.G
+var validator = new FormValidator('validate-modal', [{
+  name: 'username',
+  display: 'Username',
+  rules: 'required'
+}, {
+  name: 'email',
+  display: 'Email',
+  rules: 'required|valid_email'
+}, {
+  name: 'permission_checkbox',
+  display: 'Terms of Service checkbox',
+  rules: 'required'
+}, {
+  name: 'phone',
+  display: 'Phone Number',
+  rules: 'numeric'
+}, {
+  name: 'password',
+  display: 'Password',
+  rules: 'required|min_length[10]'
+}, {
+  name: 'password_confirm',
+  display: 'Password Confirmation',
+  rules: 'required|matches[password]'
+}], function(errors, event) {
+  if (errors.length > 0) {
+      var errorString = '';
+
+      for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
+          errorString += errors[i].message + '<br/>';
+      }
+
+      // Get reference to the error div
+      var errorDiv = document.querySelector('.error-div');
+
+      // Check if the error div exists
+      if (errorDiv) {
+          // Set inner HTML of error div to display error messages
+          errorDiv.innerHTML = errorString;
+      }
+  } else {
+      // If no errors submit form
+      submitForm();
+  }
+});
+
+function submitForm() {
+  var name = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var phoneNum = document.getElementById("phone-num").value;
+
+  // hide form
+  document.getElementById("validate-modal").style.display = "none";
+
+  // display message
+  var messageDiv = document.getElementById("success-message");
+  messageDiv.innerHTML = `
+  <div>
+      Hi,
+      <span style="color: blue; font-weight: 700;">
+      ${name}
+      </span>
+      you have successfully signed up!
+      We will be in touch via your email:
+      <span style="color: green; font-weight: 700;">
+      ${email}
+      </span> and phone number: <span style="color: orange; font-weight: 700;">
+      ${phoneNum}.
+      </span> 
+      <br><br>Thank you for becoming a user of the Bowes Irish Whiskey website.
+  </div>`;
+
+  var displayUser = document.getElementById("display-usr");
+  displayUser.innerHTML = `<div >
+  <h6 class="text-white">Welcome, <span class="text-dark">${name}</span> you are logged in.</h6>`;
+}
+
+// Add event listener for form submission
+document.getElementById("validate-modal").addEventListener("submit", function(event) {
+
+  // way to stop page reloading on submission
+  event.preventDefault();
+});
+
+
+// IAN.G
+// back to top button 
+// freecodecamp.org/news/back-to-top-button-and-page-progressbar-with-html-css-and-js/
+const showOnPx = 1700;
+const backToTopButton = document.querySelector(".back-to-top");
+
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden")
+  } else {
+    backToTopButton.classList.add("hidden")
+  }
+})
+
+const goToTop = () => {
+  document.body.scrollIntoView();
+};
+
+backToTopButton.addEventListener("click", goToTop)
