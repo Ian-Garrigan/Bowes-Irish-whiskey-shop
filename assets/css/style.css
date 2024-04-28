@@ -278,7 +278,7 @@ color: black;
   .abt_image, .abt_row, .abt_content, .abt_about{
     display: flex;
     flex-direction: row;
-    flex: 1 1;
+    flex: 1 2 10rem;
     margin: 2rem;
     padding: 2rem;
     align-items: center;
@@ -303,7 +303,7 @@ color: black;
 .abt_about h3{
 
   font-size: 3rem;
-  color:#90EE90;
+  color: rgb(57, 109, 90);
 
 }
 
@@ -319,12 +319,16 @@ color: black;
 .abt_image img{
   padding-top: 2rem;
   filter: drop-shadow(10px 10px 4px #d6d5b7);
-  margin:0 auto;
-  width:900px auto;
-  height: 80dvh;
-  border-radius: 3rem;
-  
-  
+  margin:1.6rem;
+  max-width: 110%;
+  border-radius: 3rem; 
+}
+
+.abt_content{
+
+  max-width: 100%;
+  margin: 5rem;
+  padding: 5rem;
 }
 
 .line{
@@ -339,7 +343,7 @@ color: black;
 
 .carousel-inner{
 width:cover;
-height: 380px;
+height:380px;
 }
 
 
@@ -438,23 +442,25 @@ height: 380px;
 .about_image img{
   padding-top: 2rem;
   filter: drop-shadow(10px 10px 4px #d6d5b7);
-  margin:0 auto;
+  margin:1.6rem;
   max-width: 100%;
   border-radius: 3rem;
  
 }
 
-.card-title{
-  text-align: center;
+#butn_green{
+
+color: rgb(31, 90, 13);
+font-weight: bold;
+text-decoration: underline;
+}
+
+#cust_btn{
+  text-align: center !important;
+  font-style: italic;
   font-weight: bold;
   color:  rgb(57, 109, 90);
   text-decoration: underline;
-}
-
-.card-text{
-  text-align: center;
-  font-style: italic;
-  color: #444;
 }
 
 .container, .pt-4{
@@ -479,10 +485,70 @@ height: 380px;
   display: none;
 }
 
+/* Minor gallery style adjustments IAN.G */
 .gallery-content {
   margin: 10px;
 }
 
 .gallery-content img {
   border-radius: 2px;
+}
+
+/* Product Page -Jibin T */
+
+#produc{
+ max-width: cover;
+ height: 100px;
+ background: #a2b8bc;
+
+}
+
+.product_heading{
+
+  text-align: center;
+  background-image: url('../../assets/images/product3.jpg');
+  position:relative;
+  padding: 9rem;
+  margin: 1;
+  font-family:CelticHand;
+  color:rgb(57, 109, 90);
+  text-transform: uppercase;
+  filter: drop-shadow(5px 5px 5px rgb(134, 180, 134));
+  font-size:20px;
+  
+}
+
+.cust_cont, .cust_ro, .cust_cola {
+
+  padding:2rem;
+  text-align: center;
+  background-color: rgb(234, 222, 218);
+}
+
+.product_price{
+  text-align: center;
+}
+
+.cust_bloc{
+  margin: 2rem;
+  font-style:italic;
+  color: rgb(49, 79, 49);
+  font-size: 1.5rem;
+  
+}
+
+
+
+.spirit_heading{
+
+  text-align: center;
+  background:#c78542;
+  position:relative;
+  margin: 1.6rem;
+  padding: 2rem;
+  font-family:CelticHand;
+  color:rgb(31, 192, 133);
+  text-transform: uppercase;
+  font-size:20px;
+
 }
