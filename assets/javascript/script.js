@@ -199,7 +199,7 @@ function gameWonDOMUpdates()
     document.getElementById("gameOutputBody").style.display="block";
 }
 
-// Modal form validation using Validate.js 2.0.1 library IAN.G
+// Modal form validation using customized Validate.js 2.0.1 library IAN.G
 var validator = new FormValidator('validate-modal', [{
   name: 'username',
   display: 'Username',
@@ -283,3 +283,28 @@ document.getElementById("validate-modal").addEventListener("submit", function(ev
   // way to stop page reloading on submission
   event.preventDefault();
 });
+
+
+// IAN.G
+// back to top button 
+// freecodecamp.org/news/back-to-top-button-and-page-progressbar-with-html-css-and-js/
+const showOnPx = 1700;
+const backToTopButton = document.querySelector(".back-to-top");
+
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden")
+  } else {
+    backToTopButton.classList.add("hidden")
+  }
+})
+
+const goToTop = () => {
+  document.body.scrollIntoView();
+};
+
+backToTopButton.addEventListener("click", goToTop)

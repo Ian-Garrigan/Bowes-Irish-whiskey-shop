@@ -211,9 +211,9 @@ color: black;
   position:sticky;
   top: 0;
   left: 0;
-  height: 10px;
+  height: 12px;
   background-color: transparent !important;
-  background: linear-gradient(to right, white calc(1% * var(--scroll-y)), transparent 0)
+  background: linear-gradient(to right, rgba(35, 130, 25, 0.815) calc(1% * var(--scroll-y)), transparent 0)
 }
 
 .audio-quotes-container {
@@ -466,7 +466,14 @@ height: 380px;
   filter: drop-shadow(5px 5px 5px rgb(134, 180, 134));
 }
 
+.back-to-top {
+  color: #181818;
+  position: fixed;
+  left: 1.4rem;
+  bottom: 2.5rem;
+  width: 45px;
+}
 
-
-
-
+.hidden {
+  display: none;
+}
